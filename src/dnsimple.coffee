@@ -6,7 +6,7 @@
 #
 # Configuration:
 #   DNSIMPLE_USERNAME
-#   DNSIMPLE_PASSWORD
+#   DNSIMPLE_API_TOKEN
 #
 # Commands:
 #   check domain <domainname> - returns whether a domain is available
@@ -14,14 +14,13 @@
 # Author:
 #   jonmagic
 
+dnsimpleToken = new Buffer(process.env.DNSIMPLE_USERNAME + ':' + process.env.DNSIMPLE_API_TOKEN).toString('base64');
+
 module.exports = (robot) ->
   robot.hear /check domain (.*)/i, (msg) ->
     domain = escape(msg.match[1])
-    user = process.env.DNSIMPLE_USERNAME
-    pass = process.env.DNSIMPLE_PASSWORD
-    auth = 'Basic ' + new Buffer(user + ':' + pass).toString('base64');
     msg.http("https://api.dnsimple.com/v1/domains/#{domain}/check")
-      .headers(Authorization: auth, Accept: 'application/json')
+      .headers("X-DNSimple-Token": dnsimpleToken, Accept: 'application/json')
       .get() (err, res, body) ->
         switch res.statusCode
           when 200
@@ -29,6 +28,6 @@ module.exports = (robot) ->
           when 404
             msg.send "Cybersquat that shit!"
           when 401
-            msg.send "You need to authenticate by setting the DNSIMPLE_USERNAME & DNSIMPLE_PASSWORD environment variables"
+            msg.send "You need to authenticate by setting the DNSIMPLE_USERNAME & DNSIMPLE_API_TOKEN environment variables"
           else
             msg.send "Unable to process your request and we're not sure why :("
