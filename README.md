@@ -1,35 +1,34 @@
-# Hubot Example
+# Hubot: hubot-dnsimple
 
-An example script package for Hubot
+A hubot script that checks domain availability via DNSimple.
 
-[![Build Status](https://travis-ci.org/hubot-scripts/hubot-example.png)](https://travis-ci.org/hubot-scripts/hubot-example)
 
-## Directory Structure
+## Installation
 
-Using the common directory structure for hubot script packages it will be easy
-to manage and allow others to easily contribute to your package.
+Add **hubot-dnsimple** to your `package.json` file:
 
-### script
+```json
+"dependencies": {
+  ...,
+  "hubot-dnsimple": "latest"
+}
+```
 
-This directory is home to a couple of development scripts; `bootstrap` and `test`
-they're used to bootstrap the development environment and run tests
-respectively.
+Add **hubot-dnsimple** to your `external-scripts.json`:
 
-### src
+```json
+["hubot-dnsimple"]
+```
 
-This directory is home to the actual hubot scripts in the package. Your
-`index.coffee` entry point will load the scripts from this directory.
+Run `npm install hubot-dnsimple`
 
-### test
 
-This directory is home to any tests you write for your scripts. This example
-package uses Mocha, Chai and Sinon to manage writing tests.
+## Configuration
 
-## Advantages of Building a Package
+- `DNSIMPLE_USERNAME` your DNSimple account email
+- `DNSIMPLE_API_KEY` your DNSimple account api token (see [developer.dnsimple.com](http://developer.dnsimple.com/))
 
-Some of the advantages of building an npm package for your hubot script(s) are:
 
-* You don't need to rely on when hubot-scripts package is released.
-* You can specify dependencies in the `package.json` rather than have users
-  manually specify them
-* You can easily add tests using your favourite frameworks and libraries
+## Commands
+
+    check domain <domainname>       # returns whether a domain is available
