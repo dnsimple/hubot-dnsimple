@@ -12,5 +12,5 @@ describe 'dnsimple', ->
 
     require('../src/dnsimple')(@robot)
 
-  it 'registers a hear listener for "check domain (.*)"', ->
-    expect(@robot.hear).to.have.been.calledWith(/check domain (.*)/i)
+  it 'registers a respond listener for "check domain (.+)$"', ->
+    expect(@robot.respond).to.have.been.calledWith(/check domain (.+)$/i)

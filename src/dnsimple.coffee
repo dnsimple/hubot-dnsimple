@@ -9,7 +9,7 @@
 #   HUBOT_DNSIMPLE_API_TOKEN
 #
 # Commands:
-#   check domain <domainname> - returns whether a domain is available
+#   hubot check domain <domainname> - returns whether a domain is available
 #
 # Author:
 #   jonmagic
@@ -17,7 +17,7 @@
 dnsimpleToken = new Buffer(process.env.HUBOT_DNSIMPLE_USERNAME + ':' + process.env.HUBOT_DNSIMPLE_API_TOKEN).toString('base64');
 
 module.exports = (robot) ->
-  robot.hear /check domain (.*)/i, (msg) ->
+  robot.respond /check domain (.+)$/i, (msg) ->
     domain = escape(msg.match[1])
     msg.http("https://api.dnsimple.com/v1/domains/#{domain}/check")
       .headers("X-DNSimple-Token": dnsimpleToken, Accept: 'application/json')

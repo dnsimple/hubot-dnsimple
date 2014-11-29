@@ -31,4 +31,4 @@ Run `npm install hubot-dnsimple`
 
 ## Commands
 
-    check domain <domainname>       # returns whether a domain is available
+    hubot check domain <domainname>       # returns whether a domain is available
