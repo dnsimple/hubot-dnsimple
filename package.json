@@ -1,7 +1,7 @@
 {
   "name": "hubot-dnsimple",
   "description": "A hubot script that interacts with DNSimple.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Simone Carletti <weppos@weppos.net>",
   "license": "MIT",
 
