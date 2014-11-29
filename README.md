@@ -1,6 +1,6 @@
 # Hubot: hubot-dnsimple
 
-A hubot script that checks domain availability via DNSimple.
+A hubot script that checks domain availability via [DNSimple](https://dnsimple.com/).
 
 
 ## Installation
