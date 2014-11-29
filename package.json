@@ -1,22 +1,23 @@
 {
-  "name": "hubot-example",
-  "description": "An example script package for Hubot",
-  "version": "1.0.0",
-  "author": "Tom Bell <tomb@tomb.io>",
+  "name": "hubot-dnsimple",
+  "description": "A hubot script that interacts with DNSimple.",
+  "version": "0.0.1",
+  "author": "Simone Carletti <weppos@weppos.net>",
   "license": "MIT",
 
   "keywords": [
     "hubot",
-    "hubot-scripts"
+    "hubot-scripts",
+    "dnsimple"
   ],
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-example.git"
+    "url": "git://github.com/aetrion/hubot-dnsimple.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-example/issues"
+    "url": "https://github.com/aetrion/hubot-dnsimple/issues"
   },
 
   "dependencies": {
