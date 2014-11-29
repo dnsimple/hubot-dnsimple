@@ -28,6 +28,6 @@ module.exports = (robot) ->
           when 404
             msg.send "Cybersquat that shit!"
           when 401
-            msg.send "You need to authenticate by setting the DNSIMPLE_USERNAME & DNSIMPLE_API_TOKEN environment variables"
+            msg.send "You need to authenticate by setting the HUBOT_DNSIMPLE_USERNAME & HUBOT_DNSIMPLE_API_TOKEN environment variables"
           else
             msg.send "Unable to process your request and we're not sure why :("
