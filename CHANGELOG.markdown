@@ -1,6 +1,11 @@
 # Changelog
 
 
+#### master
+
+- CHANGED: Authenticate with a custom `hubot-dnsimple` user-agent.
+
+
 #### Release 0.0.3
 
 - FIXED: Authentication always fails.
