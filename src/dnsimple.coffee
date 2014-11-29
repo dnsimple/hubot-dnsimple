@@ -5,8 +5,8 @@
 #   None
 #
 # Configuration:
-#   DNSIMPLE_USERNAME
-#   DNSIMPLE_API_TOKEN
+#   HUBOT_DNSIMPLE_USERNAME
+#   HUBOT_DNSIMPLE_API_TOKEN
 #
 # Commands:
 #   check domain <domainname> - returns whether a domain is available
@@ -14,7 +14,7 @@
 # Author:
 #   jonmagic
 
-dnsimpleToken = new Buffer(process.env.DNSIMPLE_USERNAME + ':' + process.env.DNSIMPLE_API_TOKEN).toString('base64');
+dnsimpleToken = new Buffer(process.env.HUBOT_DNSIMPLE_USERNAME + ':' + process.env.HUBOT_DNSIMPLE_API_TOKEN).toString('base64');
 
 module.exports = (robot) ->
   robot.hear /check domain (.*)/i, (msg) ->

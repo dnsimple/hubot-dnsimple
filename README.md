@@ -25,8 +25,8 @@ Run `npm install hubot-dnsimple`
 
 ## Configuration
 
-- `DNSIMPLE_USERNAME` your DNSimple account email
-- `DNSIMPLE_API_KEY` your DNSimple account api token (see [developer.dnsimple.com](http://developer.dnsimple.com/))
+- `HUBOT_DNSIMPLE_USERNAME` your DNSimple account email
+- `HUBOT_DNSIMPLE_API_KEY` your DNSimple account api token (see [developer.dnsimple.com](http://developer.dnsimple.com/))
 
 
 ## Commands
