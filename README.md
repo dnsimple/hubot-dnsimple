@@ -2,6 +2,9 @@
 
 A hubot script that checks domain availability via [DNSimple](https://dnsimple.com/).
 
+[![Build Status](https://travis-ci.org/aetrion/hubot-dnsimple.svg?branch=master)](https://travis-ci.org/aetrion/hubot-dnsimple)
+[![npm version](https://badge.fury.io/js/hubot-dnsimple.svg)](http://badge.fury.io/js/hubot-dnsimple)
+
 
 ## Installation
 
