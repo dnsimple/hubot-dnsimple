@@ -14,7 +14,7 @@
 # Author:
 #   jonmagic
 
-dnsimpleToken = new Buffer(process.env.HUBOT_DNSIMPLE_USERNAME + ':' + process.env.HUBOT_DNSIMPLE_API_TOKEN).toString('base64');
+dnsimpleToken = process.env.HUBOT_DNSIMPLE_USERNAME + ':' + process.env.HUBOT_DNSIMPLE_API_TOKEN
 
 module.exports = (robot) ->
   robot.respond /check domain (.+)$/i, (msg) ->
