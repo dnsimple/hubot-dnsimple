@@ -20,7 +20,7 @@ module.exports = (robot) ->
     user = process.env.DNSIMPLE_USERNAME
     pass = process.env.DNSIMPLE_PASSWORD
     auth = 'Basic ' + new Buffer(user + ':' + pass).toString('base64');
-    msg.http("https://dnsimple.com/domains/#{domain}/check")
+    msg.http("https://api.dnsimple.com/v1/domains/#{domain}/check")
       .headers(Authorization: auth, Accept: 'application/json')
       .get() (err, res, body) ->
         switch res.statusCode
